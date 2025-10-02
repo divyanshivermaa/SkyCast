@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Today's Weather - SKYCAST</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" type="module" defer></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Luckiest+Guy&family=Madimi+One&family=Pangolin&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="root">
+        <div class="topnav">
+            <div class="undertopnav">
+                <img src="image/logoo-fotor-2024051816554.png" alt="logoo" height="35">
+                <a href="index.html" id="name">SKYCAST</a>
+            </div>
+            <form class="d-flex" role="search">
+                <input type="text" placeholder="Search location" id="city">
+                <button class="btn" type="submit" id="submit">search</button>
+            </form>
+        </div>
+        
+        <div class="subnav-items">
+            <a href="index.html">Today</a>
+            <a href="weekly.html">Weekly</a>
+            <a href="air-report.html">Air Report</a>
+        </div>
+
+        <div class="card-container">
+            <div class="card-header">
+                <h1><span id="cityName">Loading...</span> Weather</h1>
+                <p class="last-updated">Last updated: <span id="lastUpdated">--:--</span></p>
+            </div>
+            <div class="today-card">
+                <div class="weather-main">
+                    <div class="temperature">
+                        <span class="temp-value" id="temp">--</span>
+                        <span class="temp-unit">°C</span>
+                    </div>
+                    <div class="weather-icon" id="weatherIcon">
+                        <span class="material-symbols-outlined">cloud</span>
+                    </div>
+                </div>
+
+                <div class="weather-images">
+                    <img src="https://images.unsplash.com/photo-1501630834273-4b5604d2ee31?w=800" alt="Weather" class="weather-image" id="weatherImage">
+                    <div class="weather-image-overlay">
+                        <span class="weather-description" id="weatherDescription">Loading weather description...</span>
+                    </div>
+                </div>
+
+                <div class="weather-details">
+                    <div class="detail-item">
+                        <span class="material-symbols-outlined">thermometer</span>
+                        <div class="detail-text">
+                            <span class="detail-label">Feels Like</span>
+                            <span class="detail-value" id="feels_like">--°C</span>
+                        </div>
+                    </div>
+
+                    <div class="detail-item">
+                        <span class="material-symbols-outlined">thermometer_minus</span>
+                        <div class="detail-text">
+                            <span class="detail-label">Min Temp</span>
+                            <span class="detail-value" id="min_temp">--°C</span>
+                        </div>
+                    </div>
+
+                    <div class="detail-item">
+                        <span class="material-symbols-outlined">thermometer_add</span>
+                        <div class="detail-text">
+                            <span class="detail-label">Max Temp</span>
+                            <span class="detail-value" id="max_temp">--°C</span>
+                        </div>
+                    </div>
+
+                    <div class="detail-item">
+                        <span class="material-symbols-outlined">humidity_percentage</span>
+                        <div class="detail-text">
+                            <span class="detail-label">Humidity</span>
+                            <span class="detail-value" id="humidity">--%</span>
+                        </div>
+                    </div>
+
+                    <div class="detail-item">
+                        <span class="material-symbols-outlined">airwave</span>
+                        <div class="detail-text">
+                            <span class="detail-label">Wind Speed</span>
+                            <span class="detail-value" id="wind_speed">-- km/h</span>
+                        </div>
+                    </div>
+
+                    <div class="detail-item">
+                        <span class="material-symbols-outlined">cloud</span>
+                        <div class="detail-text">
+                            <span class="detail-label">Cloud Cover</span>
+                            <span class="detail-value" id="cloud_pct">--%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en" class="accuweather">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Weather App v1</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+</head>
+
+<body>
+    <div class="root-template">
+        <div class="headerouter">
+            <div class="headernav">
+                <div class="MainmenuHeader">
+                    <a class="leftsidelogo" href="index.html"> <img class='logo' src="images/cloudlight.png"
+                            alt="error"></a>
+                    <div class="websitename ">
+                        <a class="websitename" href="index.html">CloudRetainer</a>
+                    </div>
+                    <div class="citynameinheader ">
+                        Lucknow
+                    </div>
+                    <form class="search-out">
+                        <div class="searchbar">
+                            <span class="search-icon material-symbols-outlined">search</span>
+                            <input class="search-input" type="search" placeholder="search">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="page-nav">
+            <div class="subnav secondary-nav" data-gatype="city">
+                <div class="overflow overflow-left" data-qa="leftArrow">
+                    <svg class="arrow chevron-icon left" xmlns="http://www.w3.org/2000/svg" width="10" height="6"
+                        viewBox="0 0 10 6">
+                        <path d="M10 .969L9.037 0 5 4.063.963 0 0 .969 5 6z"></path>
+                    </svg>
+                </div>
+                <div class="overflow overflow-right" data-qa="rightArrow">
+                    <svg class="arrow chevron-icon right" xmlns="http://www.w3.org/2000/svg" width="10" height="6"
+                        viewBox="0 0 10 6">
+                        <path d="M10 .969L9.037 0 5 4.063.963 0 0 .969 5 6z"></path>
+                    </svg>
+                </div>
+                <div class="subnav-items">
+                    <a class="subnav-item active" href="Today.html"><span>Today</span></a>
+                    <a class="subnav-item" href="#"><span>Hourly</span></a>
+                    <a class="subnav-item" href="#"><span>Daily</span></a>
+                    <a class="subnav-item" href="#"><span>Weekly</span></a>
+                    <a class="subnav-item" href="#"><span>Monthly</span></a>
+                    <a class="subnav-item" href="#"><span>Air Quality</span></a>
+                    <a class="subnav-item" href="#"><span>Health</span></a>
+                </div>
+            </div>
+        </div>
+        <div class="page">
+            <div class="page-content">
+                <div class="today-forecastcard">
+                    <div class="card-todayheader spaced-content">
+                        <h2>Tonight's Weather</h2>
+                        <p class="sub">Thu,Apr,18</p>
+                    </div>
+                    <div class="card-todaybody">
+                        <div class="bodyitem">
+                            <img class="icon" height="22" width="22"
+                                src="https://www.awxcdn.com/adc-assets/images/weathericons/36.svg">
+                            <p>
+                                Very warm with clearing
+                            </p>
+                        </div>
+                        <div class="bodyitem">
+                            <img class="icon" height="22" width="22"
+                                src="https://www.awxcdn.com/adc-assets/images/weathericons/2.svg">
+                            <p>
+                                Tomorrow: Sunny to partly cloudy and breezy</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="current-weather-card__body">
+                    <div class="current-weather-header spaced-content">
+                        <h2>Current Weather</h2>
+                        <p class="sub">time</p>
+                    </div>
+                    <div class="current-weather-card__panel">
+
+                        <div class="forecast-container">
+                            <div class="forecast-realfeel">
+                                <svg class="weather-icon" data-src="/images/weathericons/33.svg" viewBox="0 0 288 288"
+                                    width="88" height="88">
+                                    <path
+                                        d="M221.96 203.022a106.311 106.311 0 0 1-106.68-106.31 105.34 105.34 0 0 1 19.875-61.661C85.26 42.978 47.299 84.06 43.33 134.424c-3.97 50.363 27.09 96.885 75.125 112.53 48.035 15.645 100.534-3.664 126.986-46.705a106.311 106.311 0 0 1-23.481 2.773Z"
+                                        stroke="#686763" stroke-width="9.244" fill="none" fill-rule="evenodd"
+                                        stroke-linecap="round" stroke-linejoin="bevel"></path>
+                                </svg>
+                                <div class="temp-container">
+                                    <div class="temp">36°<span class="after-temp">C</span></div>
+                                    <div class="real-feel">
+                                        RealFeel®
+                                        34°
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <span class="phrase">Clear</span>
+                                <span class="cur-con-weather-card__cta">
+                                </span>
+                            </div>
+                        </div>
+                        <div class="forecast-container details-container">
+
+                            <div class="spaced-content detail">
+                                <span class="label">Wind</span>
+                                <span class="value">WNW 16 km/h</span>
+                            </div>
+                            <div class="spaced-content detail">
+                                <span class="label">Wind Gusts</span>
+                                <span class="value">32 km/h</span>
+                            </div>
+                            <div class="spaced-content detail">
+                                <span class="label">Air Quality</span>
+                                <span class="value" style="color: #43D357">Fair</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="dailylist"></div>
+
+            </div>
+
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekly Forecast - SKYCAST</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" type="module" defer></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Luckiest+Guy&family=Madimi+One&family=Pangolin&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="root">
+        <div class="topnav">
+            <div class="undertopnav">
+                <img src="image/logoo-fotor-2024051816554.png" alt="logoo" height="35">
+                <a href="index.html" id="name">SKYCAST</a>
+            </div>
+            <form class="d-flex" role="search">
+                <input type="text" placeholder="Search location" id="city">
+                <button class="btn" type="submit" id="submit">search</button>
+            </form>
+        </div>
+        
+        <div class="subnav-items">
+            <a href="index.html">Today</a>
+            <a href="weekly.html">Weekly</a>
+            <a href="air-report.html">Air Report</a>
+        </div>
+
+        <div class="weekly-container">
+            <div class="weekly-header">
+                <h1><span id="cityName">Loading...</span> 5-Day Forecast</h1>
+                <p class="last-updated">Last updated: <span id="lastUpdated">--:--</span></p>
+            </div>
+
+            <div class="forecast-grid">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,1124 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    background: #6190E8;  
+    background: -webkit-linear-gradient(to top, #A7BFE8, #6190E8);
+    background: linear-gradient(to top, #A7BFE8, #6190E8); 
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100vh;
+    font-family: 'Pangolin', sans-serif;
+    overflow-x: hidden;
+}
+
+.root {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.topnav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(24, 33, 43, 0.85);
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(94, 134, 155, 0.544);
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    min-height: 80px;
+    z-index: 1000;
+    font-family: 'Inter', sans-serif;
+}
+
+.undertopnav {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 20px;
+    z-index: 1;
+    font-family: 'Inter', sans-serif;
+}
+
+.undertopnav img {
+    height: 35px;
+    width: auto;
+}
+
+#name {
+    color: white;
+    font-size: 28px;
+    font-weight: 700;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    transition: color 0.3s ease;
+    pointer-events: none;
+    margin: 0;
+    padding: 0;
+}
+
+.d-flex {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    z-index: 1;
+    font-family: 'Inter', sans-serif;
+}
+
+#city {
+    height: 45px;
+    width: 350px;
+    font-size: 16px;
+    padding: 0 15px;
+    border-radius: 20px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.8);
+    font-weight: 400;
+    font-family: 'Inter', sans-serif;
+    color: #333;
+    margin: 0;
+}
+
+.topnav button,
+.d-flex .btn {
+    padding: 10px 25px;
+    border-radius: 20px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    font-weight: 400;
+    transition: all 0.3s ease;
+    height: 45px;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    margin: 0;
+}
+
+.subnav-items {
+    background-color: rgba(22, 26, 30, 0.77);
+    padding: 12px 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    border-bottom: 7px solid rgba(111, 157, 206, 0.807);
+    width: 100%;
+    box-sizing: border-box;
+    min-height: 60px;
+    z-index: 1000;
+    position: relative;
+    font-family: 'Inter', sans-serif;
+}
+
+.topnav a, .subnav-items a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 8px 15px;
+    transition: all 0.3s ease;
+    position: relative;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+}
+
+.subnav-items a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: #A7BFE8;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.subnav-items a:hover {
+    color: #A7BFE8;
+}
+
+.subnav-items a:hover::after {
+    width: 100%;
+}
+
+.weekly-header h1,
+.air-report-header h1 {
+    font-family: 'Inter', sans-serif;
+    font-size: 28px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.weekly-container,
+.air-report-container {
+    font-family: 'Inter', sans-serif;
+}
+
+@media (max-width: 900px) {
+    .topnav {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px 0;
+        min-height: auto;
+    }
+    
+    .d-flex {
+        position: static;
+        transform: none;
+        width: 100%;
+        justify-content: center;
+        margin: 15px 0;
+    }
+    
+    .undertopnav {
+        margin: 0;
+        width: 100%;
+        justify-content: center;
+    }
+    
+    #city {
+        width: 300px;
+        height: 40px;
+    }
+    
+    .topnav button,
+    .d-flex .btn {
+        height: 40px;
+        padding: 8px 20px;
+    }
+    
+    .subnav-items {
+        flex-wrap: wrap;
+        gap: 15px;
+        padding: 10px 0;
+        min-height: auto;
+    }
+    
+    .subnav-items a {
+        font-size: 16px;
+        padding: 6px 12px;
+    }
+}
+
+@media (max-width: 600px) {
+    .topnav {
+        padding: 15px 0;
+    }
+    
+    .d-flex {
+        margin: 10px 0;
+    }
+    
+    #city {
+        width: 250px;
+        height: 35px;
+    }
+    
+    .topnav button,
+    .d-flex .btn {
+        height: 35px;
+        padding: 6px 15px;
+    }
+    
+    .subnav-items {
+        gap: 10px;
+        padding: 8px 0;
+    }
+    
+    .subnav-items a {
+        font-size: 16px;
+        padding: 5px 10px;
+    }
+    
+    #name {
+        font-size: 24px;
+    }
+    
+    .weekly-header h1,
+    .air-report-header h1 {
+        font-size: 24px;
+    }
+}
+
+.today-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 2rem;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    position: relative;
+    box-sizing: border-box;
+    color: #333;
+}
+.tdetails{
+    font-size: 21px;
+    line-height: 35px;
+    padding-left: 10px;
+}
+.tdetails p {
+    font-family: "Actor", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    
+  }
+.top h1{
+    font-family: "Bungee", sans-serif;
+    font-weight: 1000;
+    font-style: normal;
+    padding-left: 10px;
+    text-decoration: underline;
+     } 
+.top h2{
+    position: absolute;
+    right: 10%;
+    top: -8%;
+    font-size: 50px;   
+}
+.wrapper{
+    margin-top: 10px;
+     }
+.weeklycard{
+   padding-left: 68px;
+   padding-top: 1px;
+   margin: auto;
+   background-color: rgba(254, 251, 251, 0.597);
+   width: 950px;
+   height: 585px;
+   border-radius: 10px;
+}
+.day{    
+    width: 875px;
+    height: 85px;
+    border-bottom: 3px solid rgba(128, 128, 128, 0.652);
+}
+.day5{    
+    width: 875px;
+    height: 100px;
+}
+ .top2 h1{
+    margin-top: 25px;
+    padding-left: 30px;
+    color: rgba(40, 47, 77, 0.907);
+    font-size: 41px;
+   
+}
+  .details{
+    font-size: 19px;
+    line-height: 30px;
+   
+}
+.d1{
+    position: relative;
+    left: 400px;
+    top:-85px;
+    font-size: 20px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+.d2{
+    position: relative;
+    left: 680px;
+    top: -145px;
+    font-size: 20px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+.description{
+    position: relative;
+    bottom:22px;
+    left: 22px;
+    font-size: 19px;
+    font-family:serif;
+    color: #3f4143;
+    font-weight: 548;
+}
+.top1 p{
+    font-size: 30px;
+    padding-left: 20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: rgba(17, 19, 28, 0.907);
+}
+#cloud_pct{
+    margin-left: 90px;
+}
+#feels_like{
+    margin-left: 90px;
+}
+#min_temp{
+    margin-left: 88px;
+}
+#max_temp{
+    margin-left: 83px;
+}
+#humidity{
+    margin-left: 90px;
+}
+#wind_speed{
+    margin-left: 88px;
+}
+.material-symbols-outlined{
+      position: absolute;
+      right: 17%;
+}
+
+.air-report-card {
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 30px;
+    margin: 20px auto;
+    max-width: 1000px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.air-report-card h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+
+.air-quality-index {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
+}
+
+.index-value {
+    font-size: 48px;
+    font-weight: bold;
+    margin: 10px 0;
+    padding: 10px 20px;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+.aqi-1 {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.aqi-2 {
+    background-color: #8BC34A;
+    color: white;
+}
+
+.aqi-3 {
+    background-color: #FFC107;
+    color: #333;
+}
+
+.aqi-4 {
+    background-color: #FF9800;
+    color: white;
+}
+
+.aqi-5 {
+    background-color: #F44336;
+    color: white;
+}
+
+.index-description {
+    font-size: 24px;
+    color: #333;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.pollutants {
+    margin-bottom: 40px;
+}
+
+.pollutants h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.pollutant-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.pollutant-item {
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.pollutant-item:hover {
+    transform: translateY(-5px);
+}
+
+.pollutant-item h3 {
+    margin: 10px 0;
+    color: #333;
+    font-size: 18px;
+}
+
+.pollutant-item .value {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin: 10px 0;
+}
+
+.pollutant-item .unit {
+    font-size: 14px;
+    color: #666;
+}
+
+.health-recommendations {
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 20px;
+    border-radius: 15px;
+    margin-top: 20px;
+}
+
+.health-recommendations h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.recommendations {
+    color: #333;
+    line-height: 1.6;
+    text-align: center;
+    font-size: 16px;
+}
+
+@media (max-width: 1200px) {
+    .root {
+        padding: 0;
+    }
+    
+    .card-container,
+    .weekly-container,
+    .air-report-container {
+        padding: 0 15px;
+    }
+    
+    .d-flex input {
+        width: 250px;
+    }
+}
+
+.air-report-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.air-report-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.air-report-header h1 {
+    color: #333;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.last-updated {
+    color: #666;
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+}
+
+.aqi-card {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.aqi-value-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.aqi-value {
+    font-size: 72px;
+    font-weight: bold;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.aqi-category {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.aqi-description {
+    font-size: 18px;
+    color: #333;
+    line-height: 1.5;
+}
+
+.pollutants-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.pollutant-card {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.pollutant-card:hover {
+    transform: translateY(-5px);
+}
+
+.pollutant-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.pollutant-header h3 {
+    margin: 0;
+    color: #333;
+    font-size: 20px;
+}
+
+.pollutant-value {
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+    margin: 10px 0;
+}
+
+.pollutant-unit {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.pollutant-description {
+    font-size: 14px;
+    color: #666;
+}
+
+.health-card {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 30px;
+    margin-top: 30px;
+}
+
+.health-card h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.health-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.health-action {
+    background: rgba(255, 255, 255, 0.3);
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 14px;
+    color: #333;
+}
+
+.weekly-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.weekly-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.weekly-header h1 {
+    color: #333;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.forecast-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    padding: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.forecast-card {
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    padding: 20px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: none;
+    transition: all 0.3s ease;
+    height: 110px;
+    position: relative;
+    margin: 0 15px;
+    width: calc(100% - 30px);
+    box-sizing: border-box;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.3);
+}
+
+.forecast-card:last-child {
+    border-bottom: none;
+}
+
+.forecast-card:hover {
+    transform: translateY(-3px);
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.forecast-date {
+    display: flex;
+    flex-direction: column;
+    min-width: 160px;
+}
+
+.day-name {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 4px;
+}
+
+.date {
+    font-size: 0.9rem;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.forecast-icon {
+    font-size: 2.8rem;
+    margin: 0 40px;
+    color: #333;
+}
+
+.forecast-temp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 140px;
+}
+
+.max-temp {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 4px;
+}
+
+.min-temp {
+    font-size: 1.1rem;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.forecast-details {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 200px;
+}
+
+.forecast-details .details-title {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.8);
+    margin-bottom: 2px;
+}
+
+.forecast-details .condition,
+.forecast-details .humidity,
+.forecast-details .wind {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.forecast-details .material-symbols-outlined {
+    font-size: 1.2rem;
+    color: rgba(0, 0, 0, 0.6);
+    position: static;
+    margin: 0;
+}
+
+.forecast-icon .material-symbols-outlined {
+    font-size: 2.8rem;
+    color: #333;
+    position: static;
+    margin: 0;
+}
+
+.card-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.card-header {
+    text-align: center;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.card-header h1 {
+    color: #333;
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    font-family: 'Inter', sans-serif;
+}
+
+.weather-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    width: 100%;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    box-sizing: border-box;
+}
+
+.temperature {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+}
+
+.temp-value {
+    font-size: 4rem;
+    font-weight: 600;
+    color: #333;
+    line-height: 1;
+    font-family: 'Inter', sans-serif;
+}
+
+.temp-unit {
+    font-size: 2rem;
+    color: #333;
+    font-family: 'Inter', sans-serif;
+}
+
+.weather-icon {
+    font-size: 3.5rem;
+    color: #333;
+    transition: transform 0.3s ease;
+}
+
+.weather-icon:hover {
+    transform: scale(1.1);
+}
+
+.weather-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.detail-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-sizing: border-box;
+    position: relative;
+    min-height: 4rem;
+    width: 100%;
+}
+
+.detail-item:hover {
+    transform: translateY(-3px);
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.detail-item .material-symbols-outlined {
+    font-size: 1.75rem;
+    color: #333;
+    flex-shrink: 0;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.5rem;
+    border-radius: 50%;
+    position: static;
+    margin-right: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 2.75rem;
+    height: 2.75rem;
+}
+
+.detail-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    flex: 1;
+    min-width: 0;
+    padding-right: 0.5rem;
+    width: calc(100% - 3.25rem);
+}
+
+.detail-label {
+    font-size: 0.875rem;
+    color: #666;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.detail-value {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #333;
+    font-family: 'Inter', sans-serif;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+}
+
+#max_temp,
+#humidity,
+#cloud_pct {
+    margin: 0;
+    padding: 0;
+}
+
+#wind_speed {
+    white-space: normal;
+    word-break: keep-all;
+}
+
+@media (max-width: 768px) {
+    .card-container {
+        padding: 0.5rem;
+    }
+    
+    .today-card {
+        padding: 1.5rem;
+    }
+    
+    .weather-main {
+        flex-direction: column;
+        text-align: center;
+        padding: 1rem;
+    }
+    
+    .temperature {
+        justify-content: center;
+    }
+    
+    .weather-details {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
+    }
+    
+    .temp-value {
+        font-size: 3rem;
+    }
+    
+    .weather-icon {
+        font-size: 2.5rem;
+    }
+    
+    .detail-item {
+        min-height: 3.5rem;
+    }
+    
+    .detail-item .material-symbols-outlined {
+        font-size: 1.5rem;
+        padding: 0.4rem;
+        min-width: 2.5rem;
+        height: 2.5rem;
+    }
+    
+    .detail-text {
+        padding-right: 0.25rem;
+        width: calc(100% - 3rem);
+    }
+    
+    .subnav-items a {
+        font-size: 16px;
+        padding: 6px 12px;
+    }
+    
+    .subnav-items {
+        gap: 20px;
+        padding: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .card-container {
+        padding: 0.25rem;
+    }
+    
+    .today-card {
+        padding: 1rem;
+    }
+    
+    .weather-details {
+        grid-template-columns: 1fr;
+    }
+    
+    .temp-value {
+        font-size: 2.5rem;
+    }
+    
+    .temp-unit {
+        font-size: 1.5rem;
+    }
+    
+    .weather-icon {
+        font-size: 2rem;
+    }
+    
+    .detail-item {
+        min-height: 3.25rem;
+    }
+    
+    .detail-item .material-symbols-outlined {
+        font-size: 1.25rem;
+        padding: 0.3rem;
+        min-width: 2.25rem;
+        height: 2.25rem;
+    }
+    
+    .detail-text {
+        padding-right: 0.15rem;
+        width: calc(100% - 2.75rem);
+    }
+    
+    .subnav-items a {
+        font-size: 14px;
+        padding: 5px 10px;
+    }
+    
+    .subnav-items {
+        gap: 15px;
+        padding: 8px 0;
+    }
+}
+
+.weather-images {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    margin: 20px 0;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.weather-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.weather-image:hover {
+    transform: scale(1.05);
+}
+
+.weather-image-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+    padding: 20px;
+    color: white;
+}
+
+.weather-description {
+    font-size: 1.2em;
+    font-weight: 500;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+

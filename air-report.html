@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Air Report - SKYCAST</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" type="module" defer></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Luckiest+Guy&family=Madimi+One&family=Pangolin&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="root">
+        <div class="topnav">
+            <div class="undertopnav">
+                <img src="image/logoo-fotor-2024051816554.png" alt="logoo" height="35">
+                <a href="index.html" id="name">SKYCAST</a>
+            </div>
+            <form class="d-flex" role="search">
+                <input type="text" placeholder="Search location" id="city">
+                <button class="btn" type="submit" id="submit">search</button>
+            </form>
+        </div>
+        
+        <div class="subnav-items">
+            <a href="index.html">Today</a>
+            <a href="weekly.html">Weekly</a>
+            <a href="air-report.html">Air Report</a>
+        </div>
+
+        <div class="air-report-container">
+            <div class="air-report-header">
+                <h1><span id="cityName">Loading...</span> Air Quality</h1>
+                <p class="last-updated">Last updated: <span id="lastUpdated">--:--</span></p>
+            </div>
+
+            <div class="aqi-card">
+                <div class="aqi-value-container">
+                    <div class="aqi-value" id="aqi-value">--</div>
+                    <div class="aqi-category" id="aqi-category">Loading...</div>
+                </div>
+                <div class="aqi-description" id="aqi-description">
+                    Air quality is being measured...
+                </div>
+            </div>
+
+            <div class="pollutants-grid">
+                <div class="pollutant-card">
+                    <div class="pollutant-header">
+                        <span class="material-symbols-outlined">air</span>
+                        <h3>PM2.5</h3>
+                    </div>
+                    <div class="pollutant-value" id="pm25">--</div>
+                    <div class="pollutant-unit">μg/m³</div>
+                    <div class="pollutant-description">Fine particulate matter</div>
+                </div>
+
+                <div class="pollutant-card">
+                    <div class="pollutant-header">
+                        <span class="material-symbols-outlined">air</span>
+                        <h3>PM10</h3>
+                    </div>
+                    <div class="pollutant-value" id="pm10">--</div>
+                    <div class="pollutant-unit">μg/m³</div>
+                    <div class="pollutant-description">Coarse particulate matter</div>
+                </div>
+
+                <div class="pollutant-card">
+                    <div class="pollutant-header">
+                        <span class="material-symbols-outlined">co2</span>
+                        <h3>CO</h3>
+                    </div>
+                    <div class="pollutant-value" id="co">--</div>
+                    <div class="pollutant-unit">ppm</div>
+                    <div class="pollutant-description">Carbon Monoxide</div>
+                </div>
+
+                <div class="pollutant-card">
+                    <div class="pollutant-header">
+                        <span class="material-symbols-outlined">air</span>
+                        <h3>NO₂</h3>
+                    </div>
+                    <div class="pollutant-value" id="no2">--</div>
+                    <div class="pollutant-unit">ppb</div>
+                    <div class="pollutant-description">Nitrogen Dioxide</div>
+                </div>
+            </div>
+
+            <div class="health-card">
+                <h2>Health Recommendations</h2>
+                <div class="recommendations" id="health-recommendations">
+                    Loading health recommendations...
+                </div>
+                <div class="health-actions" id="health-actions">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 
